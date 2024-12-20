@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Клонируем репозиторий
-                git branch: 'main', url: 'https://github.com/username/repository.git'
+                // Клонируем репозиторий с токеном
+                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/Skrades/rgr.git'
             }
         }
 
